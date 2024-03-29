@@ -24,8 +24,10 @@ contactsRouter.post(
 
 contactsRouter.put(
   "/:id",
+  isValidId,
   validateBody(updateContactSchema),
   isBodyEmpty,
+  ctrlWrapper(updateById),
   contactsControllers.updateContact
 );
 

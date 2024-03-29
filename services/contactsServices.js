@@ -10,7 +10,6 @@ const updateContacts = (contacts) =>
 
 export async function getAllContacts() {
   const data = await fs.readFile(contactsPath);
-  console.log(data);
   return JSON.parse(data);
 }
 
